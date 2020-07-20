@@ -9,7 +9,7 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.4.0",
+    "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-react": "^7.20.3",
@@ -21,6 +21,8 @@
     "dev": "parcel index.html"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.10.4",
+    "babel-polyfill": "^6.26.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-jsx": "^3.3.0"

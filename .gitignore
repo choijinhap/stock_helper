@@ -1,0 +1,5 @@
+view/.cache/*
+view/dist/*
+view/node_modules/*
+view/*.log
+node_modules/*

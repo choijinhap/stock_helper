@@ -6,10 +6,12 @@ import "@babel/polyfill";
 
 
 const bringFS = async ()=>{
-  const server="localhost:8000";
-  const response = await axios.post(server,{
-    name: 'naver',
-  });
+  const server="https://jsonplaceholder.typicode.com/posts";
+  const params =new URLSearchParams();
+  params.append('name','naver');
+  params.append('year','2019');
+  params.append('quarter',1);
+  const response = await axios.post(server,params);
   console.log(response.data);
 }
 

@@ -39059,22 +39059,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var bringFS = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-    var server, response;
+    var server, params, response;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            server = "localhost:8000";
-            _context.next = 3;
-            return _axios.default.post(server, {
-              name: 'naver'
-            });
+            server = "https://jsonplaceholder.typicode.com/posts";
+            params = new URLSearchParams();
+            params.append('name', 'naver');
+            params.append('year', '2019');
+            params.append('quarter', 1);
+            _context.next = 7;
+            return _axios.default.post(server, params);
 
-          case 3:
+          case 7:
             response = _context.sent;
             console.log(response.data);
 
-          case 5:
+          case 9:
           case "end":
             return _context.stop();
         }
@@ -39135,7 +39137,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "16190" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "23330" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
